@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: hsl(30, 38%, 92%);
+
+        font-size: 14px;
+      }
+      .perfume-section {
+        max-width: 1440px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        width: 530px;
+        display: flex;
+        align-items: center;
+        margin-top: 90px;
+
+        padding: 3.2rem 0;
+      }
+      .perfume {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 11px;
+
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .perfume-img-box {
+        width: 100%;
+      }
+      .perfume-text-box {
+        width: 180px;
+        margin-left: 32px;
+      }
+      h3 {
+        color: #888;
+        line-height: 1.5;
+        letter-spacing: 5px;
+        margin-top: 16px;
+        margin-left: -75px;
+      }
+      h2 {
+        font-weight: 700;
+        margin-top: 16px;
+        width: 120px;
+        display: flex;
+        text-align: left;
+        letter-spacing: -0.5px;
+        word-spacing: 1px;
+        line-height: 1;
+        margin-left: -71px;
+      }
+      .perfume-content {
+        margin-top: 22px;
+        line-height: 1.5;
+        width: 190px;
+        margin-left: -3px;
+        display: flex;
+        text-align: left;
+      }
+      .prices {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 30px;
+        line-height: 0.5;
+      }
+      .real-price {
+        font-weight: 700;
+        font-size: 24px;
+        color: hsl(158, 36%, 37%);
+      }
+      .fake-price {
+        text-decoration-line: line-through;
+      }
+
+      .btn {
+        margin-top: 48px;
+
+        border: none;
+        width: 200px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px 52px;
+        background-color: hsl(158, 36%, 37%);
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .btn:active,
+      .btn:hover {
+        cursor: pointer;
+        background-color: darkslategray;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      /*  For Mobile Screens (375px)*/
+      @media (max-width: 600px) {
+        .perfume {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .container {
+          width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .perfume-img-box {
+          width: 300px;
+          height: 320px;
+        }
+
+        .btn {
+          margin-bottom: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <section class="perfume-section">
+        <div class="container">
+          <div class="perfume">
+            <img
+              src="images/image-product-desktop.jpg"
+              alt="perfume-pictire"
+              class="perfume-img-box"
+            />
+
+            <div class="perfume-text-box">
+              <h3>PERFUME</h3>
+              <h2>Gabrielle Essence Eau De Parfum</h2>
+              <p class="perfume-content">
+                A floral, solar and voluptuous interpretation composed by
+                Olivier Polge, Perfumer-Creator for the House of CHANEL.
+              </p>
+              <div class="prices">
+                <p class="real-price">$149.99</p>
+                <p class="fake-price">$169.99</p>
+              </div>
+              <button class="btn">
+                <img src="images/icon-cart.svg" alt="icon" />
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </center>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
